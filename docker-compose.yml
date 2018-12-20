@@ -1,0 +1,11 @@
+version: "3"
+services:
+  go:
+    build: ./go
+    volumes:
+      - ./go:/go/src/github.com/IkezoeMakoto/docker-for-golang/go
+
+  run:
+    build: ./run
+    depends_on:
+      - go
